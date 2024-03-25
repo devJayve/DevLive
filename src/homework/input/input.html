@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DevLive</title>
+    <link rel="stylesheet" href="../common/nav.css">
+    <link rel="stylesheet" href="input.css">
+    <link rel="stylesheet" href="../common/common.css">
+</head>
+<body>
+<nav class="nav">
+    <div class="nav-left">
+        <img src="../assets/logo.png" class="logo">
+        <a href="#">홈</a>
+        <a href="#">리더보드</a>
+        <a href="#">뉴스</a>
+        <a href="./input.html">뉴스 등록</a>
+    </div>
+    <div class="nav-right">
+        <div class="nav-news-search">
+            <input type="text" class="nav-news-search-input" placeholder="기사 검색">
+            <button class="nav-news-search-button"></button>
+        </div>
+        <button class="nav-login">로그인</button>
+    </div>
+</nav>
+<div class="content">
+    <div class="top">
+        <div class="title">기사 등록</div>
+        <button class="submit">등록</button>
+    </div>
+    <div class="line"></div>
+    <p class="sub-title">기본 정보</p>
+    <table>
+        <tr>
+            <th>언론사</th>
+            <td>
+                <div class="search-company">
+                    <input class="search-company-input ">
+                    <button class="search-company-button">검색</button>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th>상위 카테고리</th>
+            <td>
+                <div class="select-box">
+                    <select id="parentSelect">
+                        <option value="" disabled selected>선택</option>
+                        <option>인프라</option>
+                        <option>비즈니스</option>
+                        <option>디자인</option>
+                    </select>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th>하위 카테고리</th>
+            <td>
+                <div class="select-box">
+                    <select id="childSelect" disabled>
+                        <option value="" disabled selected>선택</option>
+                        <option>test</option>
+                        <option>test</option>
+                        <option>test</option>
+                    </select>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th>썸네일 이미지</th>
+            <td>
+                <div class="no-image">이미지 없음</div>
+                <div class="thumbnail-input-box">
+                    <label for="submitThumbnail">파일 업로드</label>
+                    <input id="submitThumbnail" type="file" accept="image/*" onchange="loadFile(this)">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th>본문 이미지</th>
+            <td>
+                <div class="no-image">이미지 없음</div>
+                <div class="thumbnail-input-box">
+                    <label for="submitContentImage">파일 업로드</label>
+                    <input id="submitContentImage" type="file" accept="image/*" onchange="loadFile(this)">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th>기사 취재일</th>
+            <td>
+                <input type="date" name="dateofbirth" id="dateofbirth">
+            </td>
+        </tr>
+        <tr>
+            <th>기사 제목</th>
+            <td>
+                <input class="content-title" type="text" placeholder="제목을 입력해주세요.(최대 128글자)" maxlength="128">
+            </td>
+        </tr>
+        <tr>
+            <th>본문</th>
+            <td>
+                <textarea class="content-textarea" placeholder="본문을 입력해주세요.(최대 50,000글자)" maxlength="50000"></textarea>
+            </td>
+        </tr>
+    </table>
+</div>
+<script src="input.js"></script>
+</body>
+</html>

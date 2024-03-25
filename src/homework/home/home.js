@@ -8,10 +8,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
         newsItem.className = 'news-item';
         newsItem.innerHTML = `
-            <img class="news-thumbnail" src="./assets/dummy_news_thumbnail.png">
+            <img class="news-thumbnail" src="../assets/dummy_news_thumbnail.png">
             <div class="news-item-content">
-                <div class="news-item-content-title">기사 제목 ${i+1}</div>
-                <div class="news-item-content-desc">기사 내용 ${i+1}</div>
+                <div class="news-item-content-title">기사 제목 ${i + 1}</div>
+                <div class="news-item-content-desc">기사 내용 ${i + 1}</div>
             </div>
             <div class="news-item-meta">
                 <div>2024.04.01</div>
